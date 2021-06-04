@@ -1,0 +1,23 @@
+version: "3.3"
+services:
+  director:
+    image: agoldis/sorry-cypress-director
+    expose:
+      - 1234
+  runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sorry-cypress-demo
+    depends_on:
+      - director
+    environment:
+      CYPRESS_API_URL: http://director:1234/
+      CYPRESS_CI_BUILD_ID: hello-cypress
+      CYPRESS_RECORD_KEY: somekey
+    # deploy:
+    #   replicas: 3
+    ipc: host
+    volumes:
+      - ./cypress.json:/e2e/cypress.json
+      - ./cypress:/e2e/cypress
