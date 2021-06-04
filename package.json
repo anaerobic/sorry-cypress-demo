@@ -1,0 +1,23 @@
+{
+  "name": "sorry-cypress-demo",
+  "version": "1.0.0",
+  "description": "The example project contains just a boilerplate cypress tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agoldis/sorry-cypress-demo.git"
+  },
+  "author": "Michael W. Martin <mmartin2@lifetimefitness.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agoldis/sorry-cypress-demo/issues"
+  },
+  "homepage": "https://github.com/agoldis/sorry-cypress-demo#readme",
+  "devDependencies": {
+    "cy2": "^1.2.1",
+    "cypress": "^7.4.0"
+  }
+}
